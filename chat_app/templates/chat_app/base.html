@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <nav class="shadow-lg">
+        <div class="container px-5 py-3" style="display: flex; align-items: center; justify-content: space-between;">
+            <a href="#" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/messenger-logo-fill-256.png" width="30px" height="30px" alt="chat-app-logo">
+                <span class="text-center text-xl font-semibold" style="margin-left: 5px;">Chat App</span>
+            </a>
+    
+            <div class="w-auto"> 
+                <ul class="flex flex-row gap-3">
+                    <li>
+                        <a class="font-semibold" href="{% url "index" %}">Rooms</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold" href="">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    {% block body %}{% endblock body %}
+</body>
+</html>
